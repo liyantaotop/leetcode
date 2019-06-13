@@ -14,6 +14,10 @@ type ListNode struct {
 }
 
 //暴力
+//  指定 p 指针指向头部 head
+//  当 p 和 p.next 的存在为循环结束条件，当二者有一个不存在时说明链表没有去重复的必要了
+//  当 p.val 和 p.next.val 相等时说明需要去重，则将 p 的下一个指针指向下一个的下一个，这样就能达到去重复的效果
+//  如果不相等则 p 移动到下一个位置继续循环
 func deleteDuplicates(head *ListNode) *ListNode {
 
 	if head == nil ||  head.Next == nil{
