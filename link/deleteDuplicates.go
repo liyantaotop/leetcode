@@ -4,8 +4,6 @@
 package link
 
 import (
-	"openbilibili-go-common/library/net/netutil/breaker"
-	"openbilibili-go-common/app/service/bbq/recsys/service/retrieve"
 )
 
 type ListNode struct {
