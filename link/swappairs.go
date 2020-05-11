@@ -20,3 +20,18 @@ package link
 
 	return temp2
 }
+
+func swapPairs2(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+	for  {
+		temp1 := head
+		temp2 := head.Next
+
+		temp1.Next = swapPairs(temp2.Next)  // 每组交换后的第二个
+		temp2.Next = temp1
+	}
+	return temp2
+}
+
